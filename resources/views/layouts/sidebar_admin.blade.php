@@ -26,7 +26,6 @@
         @csrf
         <button type="submit" 
             class="flex items-center px-4 py-2 text-red-500 hover:bg-red-50 rounded-lg w-full text-left transition duration-200">
-            <i class="fas fa-sign-out-alt mr-3"></i>
             Logout
         </button>
         </nav>

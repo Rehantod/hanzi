@@ -21,7 +21,7 @@
                     @include('layouts.sidebar_admin')
                 @elseif (Auth::user()->role === 'kasir')
                     @include('layouts.sidebar_kasir')
-                @endif
+                @endif 
             @endauth
 
 
