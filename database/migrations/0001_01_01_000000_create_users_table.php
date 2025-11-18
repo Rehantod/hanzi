@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->string('username');
             $table->string('name');
             $table->string('email')->unique();
-            
-            // Kolom 'role' ditambahkan di sini. Menghapus ->after('email') untuk menghindari syntax error.
-            $table->string('role')->default('Kasir'); 
-            
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('role', ['admin', 'kasir']);
+            $table->string('no_hp');
+            $table->tinyInteger('status')->default(1);
             $table->rememberToken();
             $table->timestamps();
         });
