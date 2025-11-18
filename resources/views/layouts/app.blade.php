@@ -18,17 +18,14 @@
         <div class="min-h-screen bg-gray-100">
             @auth
                 @if (Auth::user()->role === 'admin')
-                    @include('layouts.sidebar_admin')
+                    @include('layouts.sidebar_admin') hayyuk
                 @elseif (Auth::user()->role === 'kasir')
                     @include('layouts.sidebar_kasir')
                 @endif 
             @endauth
 
 
-            <!-- Page Content -->
-            <main class="flex-1 bg-gray-100 p-6 overflow-auto">
-                {{ $slot }}
-            </main>
+
         </div>
     </body>
 </html>

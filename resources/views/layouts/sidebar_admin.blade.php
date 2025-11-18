@@ -8,34 +8,62 @@
         </div>
 
         <nav class="flex-1 p-4 space-y-2">
-            <a href="#"
+            <a href="admin/dashboard"
                class="flex items-center px-4 py-2 text-gray-800 rounded-lg bg-blue-100 font-semibold transition duration-200">
                 <i class="fas fa-home mr-3 text-blue-600"></i> 
                 Dashboard Admin
             </a>
-            <a href="" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition duration-200">
+            <a href="{{route('transaksi.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition duration-200">
                 <i class="fas fa-receipt mr-3"></i> 
                 Transaksi
             </a>
-            <a href="" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+            <a href="{{route('stok_barang.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
                 <i class="fas fa-boxes mr-3"></i> 
                 Stock Barang
             </a>
-
+            <a href="{{route('pelanggan.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-boxes mr-3"></i> 
+                Pelanggan
+            </a>
+            <a href="{{route('kategori.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-boxes mr-3"></i> 
+                Kategori
+            </a>
+            <a href="{{route('pembayaran.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-boxes mr-3"></i> 
+                Pembayaran
+            </a>
+            <a href="{{route('produk.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-boxes mr-3"></i> 
+                Produk
+            </a>
+            <a href="{{route('stok_log.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-boxes mr-3"></i> 
+                Stok Log
+            </a>
+            <a href="{{route('transaksi_detail.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-boxes mr-3"></i> 
+                Transaksi Detail
+            </a>
+            <a href="kelola.index" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-boxes mr-3"></i> 
+                Kelola Akun
+            </a>
             <form method="POST" action="{{ route('logout') }}" class="mx-4">
         @csrf
         <button type="submit" 
             class="flex items-center px-4 py-2 text-red-500 hover:bg-red-50 rounded-lg w-full text-left transition duration-200">
             Logout
         </button>
-        </nav>
 
+        </nav>
+        
         <div class="border-t border-gray-100 space-y-2 py-2">
             <a href="" 
-               class="flex items-center mx-4 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition duration-200">
-                <i class="fas fa-chart-line mr-3"></i> 
-                Laporan
-            </a>
+            class="flex items-center mx-4 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition duration-200">
+            <i class="fas fa-chart-line mr-3"></i> 
+            Laporan
+        </a>
         </div>
 
     </form>

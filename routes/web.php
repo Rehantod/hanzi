@@ -1,11 +1,20 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\PembayaranController;
+use App\Http\Controllers\StokLogController;
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\TransaksiDetailController;
+use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\PelangganController;
+use App\Http\Controllers\StokBarangController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('welcome');
 });
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -17,6 +26,16 @@ Route::middleware('auth', 'role:admin')->group(function () {
     Route::get('/admin/dashboard', function () {
         return view('admin.dashboard'); 
     })->name('admin.dashboard');
+
+    Route::resource('transaksi', TransaksiController::class);
+    Route::resource('pembayaran', PembayaranController::class);
+    Route::resource('stok_log', StokLogController::class);
+    Route::resource('kategori', KategoriController::class);
+    Route::resource('transaksi_detail', TransaksiDetailController::class);
+    Route::resource('produk', ProdukController::class);
+    Route::resource('pelanggan', PelangganController::class);
+    Route::resource('stok_barang', StokBarangController::class);
+
 });
 
 Route::middleware('auth', 'role:kasir')->group(function () {

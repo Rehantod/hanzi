@@ -13,7 +13,7 @@ class TransaksiController extends Controller
     {
         $transaksi = Transaksi::orderBy('tanggal', 'desc')->get(); 
 
-        return view('kasir.transaksi');
+        return view('admin.transaksi.index');
     }
 
     public function store(Request $request)
