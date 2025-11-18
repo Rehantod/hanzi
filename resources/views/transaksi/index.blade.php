@@ -1,4 +1,4 @@
-@extends('kasir.dashboard')
+@extends('')
 @section('title','Transaksi')
 @section('content')
 @endsection()
