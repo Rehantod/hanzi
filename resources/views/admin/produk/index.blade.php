@@ -7,7 +7,10 @@
                     <div>
                         <h2 class="text-2xl font-bold text-gray-800">Daftar Produk</h2>
                     </div>
+                    <div>
                     <a href="{{ route('produk.create') }}" class="bg-blue-500 hover:bg-blue-600 p-2 text-white rounded-lg transition">Tambah Produk</a>
+                    <a href="" class="bg-green-500 hover:bg-green-600 p-2 text-white rounded-lg transition">Scan Barcode</a>
+                    </div>
                 </div>
 
             <div class="overflow-x-auto rounded-lg shadow-lg bg-white p-4">
