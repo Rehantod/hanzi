@@ -8,7 +8,7 @@ use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\TransaksiDetailController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\PelangganController;
-use App\Http\Controllers\StokBarangController;
+use App\Http\Controllers\ManajemenAkunController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -34,7 +34,8 @@ Route::middleware('auth', 'role:admin')->group(function () {
     Route::resource('transaksi_detail', TransaksiDetailController::class);
     Route::resource('produk', ProdukController::class);
     Route::resource('pelanggan', PelangganController::class);
-    Route::resource('stok_barang', StokBarangController::class);
+    Route::resource('manajemen_akun', ManajemenAkunController::class);
+
 
 });
 

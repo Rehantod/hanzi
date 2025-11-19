@@ -9,46 +9,66 @@
 
         <nav class="flex-1 p-4 space-y-2">
             <a href="admin/dashboard"
-               class="flex items-center px-4 py-2 text-gray-800 rounded-lg bg-blue-100 font-semibold transition duration-200">
+               class="flex items-center mb-4 px-4 py-2 text-gray-800 rounded-lg bg-blue-100 font-semibold transition duration-200">
                 <i class="fas fa-home mr-3 text-blue-600"></i> 
                 Dashboard Admin
             </a>
-            <a href="{{route('transaksi.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition duration-200">
-                <i class="fas fa-receipt mr-3"></i> 
-                Transaksi
-            </a>
-            <a href="{{route('stok_barang.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+            <div class="flex font-semibold border-b text-gray-700 justify-between">
+            <h2>Data Master</h2>
+            <!-- Ikon -->
+            </div>
+            <div>
+            <a href="{{route('produk.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
                 <i class="fas fa-boxes mr-3"></i> 
-                Stock Barang
-            </a>
-            <a href="{{route('pelanggan.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
-                <i class="fas fa-boxes mr-3"></i> 
-                Pelanggan
+                Produk
             </a>
             <a href="{{route('kategori.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
                 <i class="fas fa-boxes mr-3"></i> 
                 Kategori
             </a>
-            <a href="{{route('pembayaran.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+             <a href="{{route('pelanggan.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
                 <i class="fas fa-boxes mr-3"></i> 
-                Pembayaran
-            </a>
-            <a href="{{route('produk.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
-                <i class="fas fa-boxes mr-3"></i> 
-                Produk
+                Pelanggan
             </a>
             <a href="{{route('stok_log.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
                 <i class="fas fa-boxes mr-3"></i> 
                 Stok Log
             </a>
+        </div>
+
+        <div class="flex font-semibold border-b text-gray-700 justify-between">
+            <h2>Menu Transaksi</h2>
+            <!-- Ikon -->
+            </div>
+            <div>
+            <a href="{{route('transaksi.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition duration-200">
+                <i class="fas fa-receipt mr-3"></i> 
+                Transaksi
+            </a>
+           
+            
+            <a href="{{route('pembayaran.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-boxes mr-3"></i> 
+                Pembayaran
+            </a>
+            
+            
             <a href="{{route('transaksi_detail.index')}}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
                 <i class="fas fa-boxes mr-3"></i> 
                 Transaksi Detail
             </a>
-            <a href="kelola.index" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+            </div>
+
+            <div class="flex font-semibold border-b text-gray-700 justify-between">
+            <h2>Menu Transaksi</h2>
+            <!-- Ikon -->
+            </div>
+            <div>
+            <a href="{{ route('manajemen_akun.index') }}" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
                 <i class="fas fa-boxes mr-3"></i> 
                 Kelola Akun
             </a>
+            </div>
             <form method="POST" action="{{ route('logout') }}" class="mx-4">
         @csrf
         <button type="submit" 
