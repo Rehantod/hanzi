@@ -8,8 +8,26 @@
 
             <div class="bg-white shadow-lg rounded-xl p-6">
 
-                <form action="{{ route('produk.store') }}" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- PERUBAHAN KRUSIAL: Tambahkan enctype="multipart/form-data" -->
+                <form action="{{ route('produk.store') }}" method="POST" enctype="multipart/form-data" class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     @csrf
+
+                    <!-- BAGIAN BARU: FOTO PRODUK (Mengambil 1 kolom penuh di mobile, 2 kolom di desktop) -->
+                    <div class="md:col-span-2 flex flex-col mb-4">
+                        <label for="foto_produk" class="text-gray-700 font-medium mb-1">Foto Produk</label>
+                        <input 
+                            type="file" 
+                            name="foto_produk" 
+                            id="foto_produk"
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                            accept="image/*"
+                        >
+                        <p class="text-sm text-gray-500 mt-1">Maksimal ukuran file 5MB. Format: JPG, PNG.</p>
+                        @error('foto_produk')
+                            <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <!-- AKHIR BAGIAN BARU -->
 
                     <div class="flex flex-col">
                         <label for="kode_barcode" class="text-gray-700 font-medium mb-1">Barcode</label>
@@ -148,7 +166,6 @@
                             Simpan
                         </button>
                     </div>
-
                 </form>
             </div>
         </div>

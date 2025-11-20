@@ -18,7 +18,7 @@
         <div class="min-h-screen bg-gray-100">
             @auth
                 @if (Auth::user()->role === 'admin')
-                    @include('layouts.sidebar_admin') hayyuk
+                    @include('layouts.sidebar_admin')
                 @elseif (Auth::user()->role === 'kasir')
                     @include('layouts.sidebar_kasir')
                 @endif 
